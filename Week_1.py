@@ -8,6 +8,12 @@ Python Basics
 Python Functions 
   - all of the optional parameters, the ones that you got default values for, need to come at the end of the function declaration. 
   - you can assign a variable to a function
+  
+Python Strings 
+  - Python strings are unicode-based in Python 3 (suppots over a million diff characters). 
+    In Python 2, string are ASCII-based (1-256 different latin chars + 0-9 numericals). 
+    The transition to unicode was due to a need to support non-latin chars + mathematical operators as well. 
+  - String manipulation is important for data cleaning...relevant functions are format and string. 
 '''
 def add_numbers(x, y, z=None, flag=False):
     if (flag):
@@ -18,3 +24,20 @@ def add_numbers(x, y, z=None, flag=False):
         return x + y + z
     
 print(add_numbers(1, 2, flag=True))
+
+#####Python Strings#######
+
+print('Chris' + str(2))
+
+
+sales_record = {
+'price': 3.24,
+'num_items': 4,
+'person': 'Chris'}
+
+sales_statement = '{} bought {} item(s) at a price of {} each for a total of {}'
+
+print(sales_statement.format(sales_record['person'],
+                             sales_record['num_items'],
+                             sales_record['price'],
+                             sales_record['num_items']*sales_record['price']))
