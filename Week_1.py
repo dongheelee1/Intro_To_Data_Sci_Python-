@@ -9,3 +9,12 @@ Python Functions
   - all of the optional parameters, the ones that you got default values for, need to come at the end of the function declaration. 
   - you can assign a variable to a function
 '''
+def add_numbers(x, y, z=None, flag=False):
+    if (flag):
+        print('Flag is true!')
+    if (z==None):
+        return x + y
+    else:
+        return x + y + z
+    
+print(add_numbers(1, 2, flag=True))
