@@ -18,6 +18,18 @@ Python Strings
 Python Dates and Times
   - The date time object has handy attributes to get the representative hour, day, seconds, etc.
   - You might want to look for any five day span of time where sales were highest, and flag that for follow up --> where datetime's time deltas come into use.
+
+Python Objects + map()
+  - classes are generally named using camel case, which means the first character of each word is capitalized.
+  - objects in Python do not have private or protected members. If you instantiate an object, you have full access to any of the methods or attributes of that object.
+  - Functional programming is a programming paradigm in which you explicitly declare all parameters which could change through execution of a given function. 
+    Thus functional programming is referred to as being side-effect free, because there is a software contract that describes what can actually change by calling a function.
+    With the functional approach, we use expressions (such as map) to transform the data. 
+    We are expressing what we want done, not how to do it. 
+    
+Python Lambdas and List comprehension
+  - python lambdas are anonymous functions. In other words, they are functions with no name, are single expressions, and are meant to be very simple.
+  - list comprehension: list comprehension by pulling the iteration on one line
 '''
 #####Python Functions#######
 def add_numbers(x, y, z=None, flag=False):
@@ -75,3 +87,16 @@ today - delta # the date 100 days ago
 
 today > today-delta # compare dates
 #True 
+
+
+######Examples of map()###########
+#idea of map: map(some function, iterable1, iterable2,...) 
+
+#list comprehension 
+#create all possible ids where it's of the form 'charchardigitdigit'
+lowercase = 'abcdefghijklmnopqrstuvwxyz'
+digits = '0123456789'
+
+correct_answer = [a+b+c+d for a in lowercase for b in lowercase for c in digits for d in digits]
+
+correct_answer[:50] # Display first 50 ids
