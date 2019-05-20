@@ -14,7 +14,12 @@ Python Strings
     In Python 2, string are ASCII-based (1-256 different latin chars + 0-9 numericals). 
     The transition to unicode was due to a need to support non-latin chars + mathematical operators as well. 
   - String manipulation is important for data cleaning...relevant functions are format and string. 
+  
+Python Dates and Times
+  - The date time object has handy attributes to get the representative hour, day, seconds, etc.
+  - You might want to look for any five day span of time where sales were highest, and flag that for follow up --> where datetime's time deltas come into use.
 '''
+#####Python Functions#######
 def add_numbers(x, y, z=None, flag=False):
     if (flag):
         print('Flag is true!')
