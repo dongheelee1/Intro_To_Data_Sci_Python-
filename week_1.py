@@ -46,3 +46,32 @@ print(sales_statement.format(sales_record['person'],
                              sales_record['num_items'],
                              sales_record['price'],
                              sales_record['num_items']*sales_record['price']))
+
+#####Python Dates and Times#######
+import datetime as dt
+import time as tm
+
+#time returns the current time in seconds since the Epoch. (January 1st, 1970)
+tm.time()
+#1558311511.450097
+
+
+#Convert the timestamp to datetime.
+dtnow = dt.datetime.fromtimestamp(tm.time()) #dt.datetime is a class that combines both a date and a time 
+dtnow
+#datetime.datetime(2019, 5, 20, 0, 32, 4, 74276)
+
+
+dtnow.year, dtnow.month, dtnow.day, dtnow.hour, dtnow.minute, dtnow.second # get year, month, day, etc.from a datetime
+#(2019, 5, 20, 0, 32, 4)
+
+delta = dt.timedelta(days = 100) # create a timedelta of 100 days
+delta
+#datetime.timedelta(100)
+
+today = dt.date.today() #datetime.date class gives a naive representation of date in year, month, day form 
+today - delta # the date 100 days ago
+#datetime.date(2019, 2, 9)
+
+today > today-delta # compare dates
+#True 
